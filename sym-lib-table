@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "hellen-one-can-0.1")(type "KiCad")(uri "${KIPRJMOD}/hellen-one/modules/can/0.1/can.kicad_sym")(options "")(descr ""))
+)
