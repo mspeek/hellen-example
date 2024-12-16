@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/home/runner/work/hellen-example/hellen-example/Test_2.kicad_sch</source>
+    <date>2024-12-16T06:05:47+0000</date>
+    <tool>Eeschema 8.0.7-8.0.7-0~ubuntu22.04.1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>Test_2.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="J1">
+      <value>Conn_01x06</value>
+      <footprint>Connector_Molex:Molex_Nano-Fit_105313-xx06_1x06_P2.50mm_Horizontal</footprint>
+      <description>Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <fields>
+        <field name="Footprint">Connector_Molex:Molex_Nano-Fit_105313-xx06_1x06_P2.50mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x06" description="Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Test_2.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>347c679b-fde4-4673-bf48-4da7970278f0</tstamps>
+    </comp>
+    <comp ref="M1">
+      <value>Module-can-0.1</value>
+      <footprint>hellen-one-can-0.1:can</footprint>
+      <description>Hellen-One CAN Module</description>
+      <fields>
+        <field name="Footprint">hellen-one-can-0.1:can</field>
+        <field name="Datasheet"/>
+        <field name="Description">Hellen-One CAN Module</field>
+      </fields>
+      <libsource lib="hellen-one-can-0.1" part="Module-can-0.1" description="Hellen-One CAN Module"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Test_2.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a5e46812-d23e-4fd7-a220-0a53f1683681</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector_Generic" part="Conn_01x06">
+      <description>Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x06</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">~</field>
+        <field name="Description">Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="hellen-one-can-0.1" part="Module-can-0.1">
+      <description>Hellen-One CAN Module</description>
+      <fields>
+        <field name="Reference">M</field>
+        <field name="Value">Module-can-0.1</field>
+        <field name="Footprint">hellen-one-can-0.1:can</field>
+        <field name="Datasheet"/>
+        <field name="Description">Hellen-One CAN Module</field>
+      </fields>
+      <pins>
+        <pin num="E1" name="GND" type="passive"/>
+        <pin num="S1" name="CANL" type="passive"/>
+        <pin num="S2" name="CANH" type="passive"/>
+        <pin num="V1" name="V5" type="passive"/>
+        <pin num="V2" name="CAN_VIO" type="passive"/>
+        <pin num="V5" name="CAN_TX" type="passive"/>
+        <pin num="V6" name="CAN_RX" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="hellen-one-can-0.1">
+      <uri>/home/runner/work/hellen-example/hellen-example/hellen-one/modules/can/0.1/can.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="+5V">
+      <node ref="J1" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="M1" pin="V1" pinfunction="V5" pintype="passive"/>
+    </net>
+    <net code="2" name="/Can_H">
+      <node ref="J1" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="M1" pin="S2" pinfunction="CANH" pintype="passive"/>
+    </net>
+    <net code="3" name="/Can_L">
+      <node ref="J1" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="M1" pin="S1" pinfunction="CANL" pintype="passive"/>
+    </net>
+    <net code="4" name="/Can_RX">
+      <node ref="J1" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="M1" pin="V6" pinfunction="CAN_RX" pintype="passive"/>
+    </net>
+    <net code="5" name="/Can_TX">
+      <node ref="J1" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="M1" pin="V5" pinfunction="CAN_TX" pintype="passive"/>
+    </net>
+    <net code="6" name="GND">
+      <node ref="J1" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="M1" pin="E1" pinfunction="GND" pintype="passive"/>
+    </net>
+    <net code="7" name="unconnected-(M1-CAN_VIO-PadV2)">
+      <node ref="M1" pin="V2" pinfunction="CAN_VIO" pintype="passive+no_connect"/>
+    </net>
+  </nets>
+</export>
